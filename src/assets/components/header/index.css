@@ -1,12 +1,12 @@
 .header{
-  font-family: var(--typography-primary-font-family);
+  font-family: var(--typography-primary-font-family); 
 }
 
 .header-section{
   display: flex;
   justify-content: space-between;
   margin: 0 1rem;
-  height: 5rem;
+  height: 5.1vw;
 }
 
 .header-logo{
@@ -14,31 +14,21 @@
 }
 
 .logo-img{
-  width: 60%;
-  height: auto;
+  height: 5.1vw;
 }
 
 .header-nav{
   width: 100%;
   display: flex;
-  
-}
- .header-nav-container{
-  width: 100%;
- }
-
-.nav{
-  display: flex;
-}
-
-.header-nav-menu{
-  
-  display: flex;
+  justify-content: space-around;
+  align-items: center;
   list-style: none;
 }
 
-.header-connect{
- 
+.menu-link{
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .connect{
