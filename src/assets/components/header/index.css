@@ -35,6 +35,21 @@
   font-weight: bold;
 }
 
+.header-menuIcon{
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.menuIconContainer{
+  margin: .5rem;
+}
+
+.menuIcon{
+  width: 1rem;
+}
+
 .connect{
   display: flex;
 }

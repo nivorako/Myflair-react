@@ -32,29 +32,57 @@ const Header = () => {
                         />
                     </a>
                 </div>                                         
-                <ul
-                    className="header-nav"
-                >
-                        {
-                            navItems.map((item, index) => {
-                                return(
-                                    <div 
-                                        key={index}
-                                        className="header-navItem"
-                                    >
-                                        <a
-                                            href="https://www.myflair.fr/#espace"
-                                            className="header-navLink"
-                                            rel="noopener noreferrer"
-                                        >
-                                            {item}
-                                        </a>
-                                    </div>
-                                )
-                            })
-                        }
-                </ul>
-                                    
+                
+                {
+                    isTablette ? (
+                        <div 
+                            className="header-menuIcon"
+                            role="button"
+                            tabIndex="0"
+                            aria-label="Menu Toggle"
+                            aria-expanded="false"
+                        >
+                            <div className="menuIconContainer">
+                                <svg
+                                    aria-hidden="true"
+                                    role="presentation"
+                                    className="menuIcon"
+                                    viewBox="0 0 1000 1000"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path d="M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                       
+                    ) : (
+                        <ul
+                            className="header-nav"
+                        >
+                                {
+                                    navItems.map((item, index) => {
+                                        return(
+                                            <div 
+                                                key={index}
+                                                className="header-navItem"
+                                                aria-label={`Navigate to ${item}`}
+                                                role="button"
+                                                tabIndex={`${index}`}
+                                            >
+                                                <a
+                                                    href="https://www.myflair.fr/#espace"
+                                                    className="header-navLink"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    {item}
+                                                </a>
+                                            </div>
+                                        )
+                                    })
+                                }
+                        </ul>
+                    )
+                }            
                 {/* <div
                     className="elementor-menu-toggle"
                     role="button"
@@ -83,8 +111,9 @@ const Header = () => {
                     <span className="elementor-screen-only">
                         Menu
                     </span>
-                </div>
-                <nav
+                    
+                </div> */}
+                {/* <nav
                     className="elementor-nav-menu--dropdown elementor-nav-menu__container"
                     aria-hidden="true"
                 >
@@ -129,8 +158,10 @@ const Header = () => {
                             </a>
                         </li>
                     </ul>
-                </nav> */}                    
-                <div
+                </nav>*/}
+                {
+                    isMobile ? null : (
+                        <div
                             className="header-connect"
                         >                                                        
                                 <a className="connect-link">
@@ -148,7 +179,10 @@ const Header = () => {
                                         Connexion / Inscription
                                     </span>
                                 </a>                                                          
-                </div>               
+                        </div>  
+                    )
+                }
+                             
             </section>
         </header>
     );
