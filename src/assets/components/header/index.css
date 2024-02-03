@@ -1,10 +1,12 @@
 .header{
+  border: thin black solid;
   font-family: var(--typography-primary-font-family); 
 }
 
 .header-section{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 1rem;
   height: 5.1vw;
 }
@@ -41,20 +43,42 @@
   justify-content: right;
   align-items: center;
 }
-
 .menuIconContainer{
-  margin: .5rem;
+  border-radius: 2px;
+  border: black thin solid;
 }
 
 .menuIcon{
   width: 1rem;
+  margin: .5rem;
 }
 
-.connect{
+.header-connect{
+  padding: .5rem 1rem;
+  background-color: black;
+  height: 3rem;
+  width: 20vw;
+  border-radius: .2rem;
+}
+
+.connect-link{
   display: flex;
+  color: white;
+}
+
+.connect-link:hover{
+  color: white;
+  cursor: pointer;
 }
 
 .connect-svg{
   width: 20px;
   color: white;
+}
+
+.connect-btn{
+  width: 100%;
+  line-height: 1rem;
+  display: flex;
+  justify-content: center;
 }

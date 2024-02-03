@@ -35,13 +35,15 @@ const Header = () => {
                 
                 {
                     isTablette ? (
-                        <div 
-                            className="header-menuIcon"
-                            role="button"
-                            tabIndex="0"
-                            aria-label="Menu Toggle"
-                            aria-expanded="false"
-                        >
+                        // menu icon
+                        isMobile ? (
+                            <div 
+                                className="header-menuIcon"
+                                role="button"
+                                tabIndex="0"
+                                aria-label="Menu Toggle"
+                                aria-expanded="false"
+                            >
                             <div className="menuIconContainer">
                                 <svg
                                     aria-hidden="true"
@@ -53,9 +55,32 @@ const Header = () => {
                                     <path d="M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z"></path>
                                 </svg>
                             </div>
-                        </div>
+                            </div>
+                        ) : (
+                            <div 
+                                className="header-menuIcon"
+                                role="button"
+                                tabIndex="0"
+                                aria-label="Menu Toggle"
+                                aria-expanded="false"
+                            >
+                            
+                                <svg
+                                    aria-hidden="true"
+                                    role="presentation"
+                                    className="menuIcon"
+                                    viewBox="0 0 1000 1000"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path d="M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z"></path>
+                                </svg>
+                            
+                            </div>
+                        )
+                        
                        
                     ) : (
+                        // header-nav
                         <ul
                             className="header-nav"
                         >
@@ -159,6 +184,7 @@ const Header = () => {
                         </li>
                     </ul>
                 </nav>*/}
+                {/* header-connect */}
                 {
                     isMobile ? null : (
                         <div
@@ -172,11 +198,16 @@ const Header = () => {
                                         viewBox="0 0 640 512"
                                         xmlns="http://www.w3.org/2000/svg"
                                     >
-                                        <path d="M224 256A128 128 0 1 0 96 128a128 128 0 0 0 128 128zm96 64a63.08 63.08 0 0 1 8.1-30.5c-4.8-.5-9.5-1.5-14.5-1.5h-16.7a174.08 174.08 0 0 1-145.8 0h-16.7A134.43 134.43 0 0 0 0 422.4V464a48 48 0 0 0 48 48h280.9a63.54 63.54 0 0 1-8.9-32zm288-32h-32v-80a80 80 0 0 0-160 0v80h-32a32 32 0 0 0-32 32v160a32 32 0 0 0 32 32h224a32 32 0 0 0 32-32V320a32 32 0 0 0-32-32zM496 432a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm32-144h-64v-80a32 32 0 0 1 64 0z"></path>
+                                        <path
+                                            d="M224 256A128 128 0 1 0 96 128a128 128 0 0 0 128 128zm96 64a63.08 63.08 0 0 1 8.1-30.5c-4.8-.5-9.5-1.5-14.5-1.5h-16.7a174.08 174.08 0 0 1-145.8 0h-16.7A134.43 134.43 0 0 0 0 422.4V464a48 48 0 0 0 48 48h280.9a63.54 63.54 0 0 1-8.9-32zm288-32h-32v-80a80 80 0 0 0-160 0v80h-32a32 32 0 0 0-32 32v160a32 32 0 0 0 32 32h224a32 32 0 0 0 32-32V320a32 32 0 0 0-32-32zM496 432a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm32-144h-64v-80a32 32 0 0 1 64 0z"
+                                            fill="white"
+                                        >    
+                                        </path>
                                     </svg>
                                     
                                     <span className="connect-btn">
-                                        Connexion / Inscription
+                                        <p>Connexion/ <br/>Inscription</p>
+                                        
                                     </span>
                                 </a>                                                          
                         </div>  
