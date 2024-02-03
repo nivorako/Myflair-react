@@ -20,12 +20,16 @@
 .header-nav{
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content:center;
   align-items: center;
   list-style: none;
 }
 
-.menu-link{
+.header-navLink{
+  padding: 1rem;
+}
+
+.header-navLink{
   color: var(--color-primary);
   text-transform: uppercase;
   font-weight: bold;

@@ -2,10 +2,16 @@ import React from "react";
 import { useMediaQuery } from 'usehooks-ts';
 import "./index.css";
 
+/**
+ * 
+ * @returns {JSX.Element} - display Myflair landing page
+ */
+
 const Header = () => {
 
     const isTablette = useMediaQuery("(max-width:1024px)");
     const isMobile = useMediaQuery("(max-width:768px)");
+    const navItems = ["location", "formation", "gestion planning", "business booster"]
 
     return (
         <header
@@ -29,38 +35,24 @@ const Header = () => {
                 <ul
                     className="header-nav"
                 >
-                    <li className="menu-item">
-                        <a
-                            href="https://www.myflair.fr/#espace"
-                            className="menu-link"
-                        >
-                            Location
-                        </a>
-                    </li>
-                    <li className="menu-item">
-                        <a
-                            href="https://www.myflair.fr/formation/"
-                            className="menu-link"
-                        >
-                            FORMATION
-                        </a>
-                    </li>
-                    <li className="menu-item">
-                        <a
-                            href="https://www.myflair.fr/gestion-planning/"
-                            className="menu-link"
-                        >
-                            Gestion Planning
-                        </a>
-                    </li>
-                    <li className="menu-item">
-                        <a
-                            href="https://www.myflair.fr/business-booster/"
-                            className="menu-link"
-                        >
-                            Business booster
-                        </a>
-                    </li>
+                        {
+                            navItems.map((item, index) => {
+                                return(
+                                    <div 
+                                        key={index}
+                                        className="header-navItem"
+                                    >
+                                        <a
+                                            href="https://www.myflair.fr/#espace"
+                                            className="header-navLink"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {item}
+                                        </a>
+                                    </div>
+                                )
+                            })
+                        }
                 </ul>
                                     
                 {/* <div
