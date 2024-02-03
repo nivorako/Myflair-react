@@ -107,7 +107,8 @@ const Header = () => {
                                 }
                         </ul>
                     )
-                }            
+                } 
+
                 {/* <div
                     className="elementor-menu-toggle"
                     role="button"
@@ -138,60 +139,15 @@ const Header = () => {
                     </span>
                     
                 </div> */}
-                {/* <nav
-                    className="elementor-nav-menu--dropdown elementor-nav-menu__container"
-                    aria-hidden="true"
-                >
-                    <ul
-                        id="menu-2-9a5956b"
-                        className="elementor-nav-menu"
-                    >
-                        <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1217">
-                            <a
-                                href="https://www.myflair.fr/#espace"
-                                className="elementor-item elementor-item-anchor menu-link"
-                                tabIndex="-1"
-                            >
-                                Location
-                            </a>
-                        </li>
-                        <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-403">
-                            <a
-                                href="https://www.myflair.fr/formation/"
-                                className="elementor-item menu-link"
-                                tabIndex="-1"
-                            >
-                                Formation
-                            </a>
-                        </li>
-                        <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-404">
-                            <a
-                                href="https://www.myflair.fr/gestion-planning/"
-                                className="elementor-item menu-link"
-                                tabIndex="-1"
-                            >
-                                Gestion Planning
-                            </a>
-                        </li>
-                        <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1008">
-                            <a
-                                href="https://www.myflair.fr/business-booster/"
-                                className="elementor-item menu-link"
-                                tabIndex="-1"
-                            >
-                                Business booster
-                            </a>
-                        </li>
-                    </ul>
-                </nav>*/}
+
+                
                 {/* header-connect */}
                 {
                     isMobile ? null : (
                         <div
                             className="header-connect"
                         >                                                        
-                                <a className="connect-link">
-                                    
+                                <a className="connect-link">                                   
                                     <svg
                                         aria-hidden="true"
                                         className="connect-svg"
@@ -206,7 +162,7 @@ const Header = () => {
                                     </svg>
                                     
                                     <span className="connect-btn">
-                                        <p>Connexion/ <br/>Inscription</p>
+                                        <p>Connexion / <br/>Inscription</p>
                                         
                                     </span>
                                 </a>                                                          
