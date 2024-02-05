@@ -63,16 +63,6 @@
   align-items: center;
 }
 
-.menuIcon{
-  width: 1.6rem;
-  margin: .2rem;
-}
-
-.menuIcon:hover{
-  cursor: pointer;
-  fill: rgb(139, 133, 91);
-}
-
 .menuIconContainer:hover{
   cursor: pointer;
   border-color: rgb(139, 133, 91);
