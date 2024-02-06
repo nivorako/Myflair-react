@@ -1,0 +1,31 @@
+.drawer{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    overflow: hidden;
+    transition: height .2s ease-in-out; 
+  }
+
+  .drawer-navItem{
+    width: 100%;
+    background-color: #000;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: "Century Gothic", Sans-serif;
+    font-size: 13px;
+    padding: 10px 20px;
+    line-height: 20px;
+  }
+
+  .drawer-navItem:hover{
+    background-color: #fff;
+  }
+
+  .drawer-navLink{
+    width: 100%;
+    color: white;
+  }
+
+  .drawer-navLink:hover{
+    color: #000;
+  }

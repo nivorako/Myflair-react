@@ -3,6 +3,7 @@ import { useMediaQuery } from 'usehooks-ts';
 import MenuIcon from "../menuIcon/MenuIcon";
 import IconClose from "../iconClose/IconClose";
 import "./index.css";
+import Drawer from "../drawer/Drawer";
 
 /**
  * 
@@ -15,15 +16,14 @@ const Header = () => {
     const isMobile = useMediaQuery("(max-width:768px)");
     const navItems = ["location", "formation", "gestion planning", "business booster"];
     const [isDrawer, toggleDrawer] = useState(false);
-
+    console.log("isDrawer :", isDrawer)
     const drawerOnClick = () => {
-        const menuIcon = document.getElementById("menuIcon");
         const drawer = document.getElementById("drawer")
         toggleDrawer(!isDrawer)
             if(!isDrawer){
-                drawer.style.display="block"
+                drawer.style.height = `${drawer.scrollHeight}px`
             }else{
-                drawer.style.display="none"
+                drawer.style.height="0"
             }
     }
 
@@ -46,11 +46,11 @@ const Header = () => {
                         />
                     </a>
                 </div>                                         
-                
-                {
+               
+                {   // si tablette ou mobile :
                     isTablette ? (
-                        // menu icon
                         isMobile ? (
+                            // si mobile : menuIcon entouré de menuIconContainer
                             <div 
                                 className="header-menuIcon"
                                 role="button"
@@ -67,6 +67,7 @@ const Header = () => {
                                 </div>
                             </div>
                         ) : (
+                            // si tablette : menuIcon
                             <div 
                                 className="header-menuIcon"
                                 role="button"
@@ -83,14 +84,14 @@ const Header = () => {
                         
                        
                     ) : (
-                        // header-nav
+                        // sinon : header-nav
                         <ul
                             className="header-nav"
                         >
                                 {
                                     navItems.map((item, index) => {
                                         return(
-                                            <div 
+                                            <li 
                                                 key={index}
                                                 className="header-navItem"
                                                 aria-label={`Navigate to ${item}`}
@@ -104,7 +105,7 @@ const Header = () => {
                                                 >
                                                     {item}
                                                 </a>
-                                            </div>
+                                            </li>
                                         )
                                     })
                                 }
@@ -112,8 +113,7 @@ const Header = () => {
                     )
                 } 
                 
-                {/* header-connect */}
-                {
+                {   // header connect
                     isMobile ? null : (
                         <div
                             className="header-connect"
@@ -142,12 +142,9 @@ const Header = () => {
                 }
             
             </section>
-            <div 
-                className="drawer"
-                id="drawer"
-            >
-                Draweeer
-            </div>
+            <Drawer 
+                navItems={navItems}
+            />
         </header>
     );
 };

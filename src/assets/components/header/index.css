@@ -70,6 +70,7 @@
 
 .header-connect{
   padding: .7rem 1rem;
+  margin-left: .5rem;
   background-color: black;
   height: 3.5rem;
   width: 20vw;
@@ -103,9 +104,6 @@
   text-align: center;
 }
 
-.drawer{
-  display: none;
-}
 
 @media screen and (max-width: 1024px) {
   .logo-img{
