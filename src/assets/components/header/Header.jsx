@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { useMediaQuery } from 'usehooks-ts';
 import MenuIcon from "../menuIcon/MenuIcon";
 import IconClose from "../iconClose/IconClose";
@@ -16,16 +16,21 @@ const Header = () => {
     const isMobile = useMediaQuery("(max-width:768px)");
     const navItems = ["location", "formation", "gestion planning", "business booster"];
     const [isDrawer, toggleDrawer] = useState(false);
-    console.log("isDrawer :", isDrawer)
-    const drawerOnClick = () => {
-        const drawer = document.getElementById("drawer")
-        toggleDrawer(!isDrawer)
-            if(!isDrawer){
-                drawer.style.height = `${drawer.scrollHeight}px`
-            }else{
-                drawer.style.height="0"
-            }
+    
+    const drawerOnClick = () => {       
+        toggleDrawer(prevState => !prevState)  ;         
     }
+
+    useEffect(() => {
+        const drawer = document.getElementById("drawer");
+        if(Drawer){
+            if(isDrawer){
+                drawer.style.height = `${drawer.scrollHeight}px`;
+            }else{
+                drawer.style.height="0";
+            }
+        }
+    })
 
     return (
         <header
@@ -80,9 +85,7 @@ const Header = () => {
                                     !isDrawer ? <MenuIcon /> : <IconClose />
                                 }
                             </div>
-                        )
-                        
-                       
+                        )                      
                     ) : (
                         // sinon : header-nav
                         <ul

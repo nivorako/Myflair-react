@@ -1,7 +1,8 @@
 
 .iconClose{
-    width: 1.4rem;
-   
+    width: 1.6rem;
+    margin: .3rem;
+    stroke: aquamarine;
 }
 
 .iconClose:hover{

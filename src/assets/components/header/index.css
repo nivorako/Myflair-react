@@ -1,5 +1,4 @@
 .header{
-  border: thin black solid;
   font-family: var(--typography-primary-font-family); 
 }
 
@@ -52,7 +51,7 @@
 .header-menuIcon{
   width: 100%;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   align-items: center;
 }
 .menuIconContainer{ 
@@ -107,7 +106,7 @@
 
 @media screen and (max-width: 1024px) {
   .logo-img{
-    height: 3.3rem;
+    height: 74px;
   }
   .header-connect{
     min-width: 153px;
