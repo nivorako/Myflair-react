@@ -1,11 +1,14 @@
 import React from "react";
+
 import "./index.css";
 
 const Home = () => {
     return (
         <>
             <div id="home-content" className="home-site-content">
-                <div className="home-container">
+            <img src={'images/0H7A4932-scaled.webp'} alt="Mon Image" />
+
+                {/* <div className="home-container">
                     <div
                         data-elementor-type="wp-page"
                         data-elementor-id="1617"
@@ -49,6 +52,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
+                        
                         <div
                             className="elementor-element elementor-element-5e60db1 e-flex e-con-boxed e-con e-parent"
                             data-id="5e60db1"
@@ -1354,9 +1358,10 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/* ast-container  */}
             </div>
+            
             {/* #content  */}
             <div
                 data-elementor-type="footer"
@@ -1364,7 +1369,7 @@ const Home = () => {
                 className="elementor elementor-165 elementor-location-footer"
                 data-elementor-post-type="elementor_library"
             >
-                <div
+                {/* <div
                     className="elementor-element elementor-element-92387c6 e-flex e-con-boxed e-con e-parent"
                     data-id="92387c6"
                     data-element_type="container"
@@ -1833,7 +1838,7 @@ const Home = () => {
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
     );
