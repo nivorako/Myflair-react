@@ -1,5 +1,7 @@
 .header{
-  font-family: var(--typography-primary-font-family); 
+  font-family: var(--typography-primary-font-family);
+  background-color: white; 
+  z-index: 100;
 }
 
 .header-section{

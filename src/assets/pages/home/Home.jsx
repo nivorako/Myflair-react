@@ -1,12 +1,14 @@
 import React from "react";
 
+import Banner from "../../components/banner/Banner";
+
 import "./index.css";
 
 const Home = () => {
     return (
         <>
-            <div id="home-content" className="home-site-content">
-            <img src={'images/0H7A4932-scaled.webp'} alt="Mon Image" />
+            <div id="home" className="home">
+                <Banner />
 
                 {/* <div className="home-container">
                     <div

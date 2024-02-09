@@ -1,0 +1,45 @@
+
+.banner{
+    position: relative;
+    background-color: aquamarine;
+    height: 50vh;
+    width: 100%;
+    border-bottom-left-radius: 80% 100px; 
+    border-bottom-right-radius: 80% 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+.banner-title{
+    color: white;
+    font-size: 60px;
+    position: relative; /* Pour que le texte reste relatif au conteneur banner */
+    z-index: 2;
+    text-align: center;
+    @media screen and (max-width:764px) {
+        font-size: 37px;
+    }
+}
+
+.banner-img{
+    position: absolute; /* Position absolue pour placer l'image */
+    top: 0; /* Positionner l'image au coin supérieur gauche du conteneur */
+    left: 0;
+    width: 100%; /* Remplir tout l'espace disponible horizontalement */
+    height: 100%; /* Remplir tout l'espace disponible verticalement */
+    object-fit: cover; /* Ajuster la taille de l'image pour couvrir complètement le conteneur */
+    z-index: 1;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur semi-transparente noire */
+    z-index: 1; /* Assure que l'overlay soit en dessous du texte */
+}
