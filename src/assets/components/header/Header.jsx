@@ -36,7 +36,7 @@ const Header = () => {
         <header
             className="header"
         >
-            <section
+            <div
                 className="header-section"
             >                                       
                 <div className="header-logo">
@@ -144,7 +144,7 @@ const Header = () => {
                     )
                 }
             
-            </section>
+            </div>
             <Drawer 
                 navItems={navItems}
             />

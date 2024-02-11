@@ -13,7 +13,7 @@
 	--typography-accent-font-weight: 500;
 }
 
-ul, li, a, span, p{
+ul, li, a, span, p, h1, h2, h3, h4, h5, h5{
     margin: 0;
     padding: 0;
 }
