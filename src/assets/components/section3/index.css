@@ -1,37 +1,45 @@
-.section2{
+.section3{
     width: 100%;
     margin: auto;
     height: auto;
     display: flex;
     flex-direction: column;
-    background-color: var(--color-primary);
+    background-color: var(--color-white);
     align-items: center;
 }
 
-.section2-title{
+.section3-title{
     position: relative;
     font-size: 3rem;
-    font-weight: 400;
     margin-bottom: 5rem;
-    color: var(--color-white);
+    font-weight: 200;
+    text-align: center;
+    color: var(--color-primary);
     @media screen and (max-width:764px) {
+        margin-top: 5rem;
         font-size: 37px;
     }
 }
 
-.section2-title::before{
+.section3-title::before{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 80px;
     content: "";
-    background-color: var(--color-white);
+    background-color: var(--color-primary);
     width: 50%;
     margin: auto;
     height: .7px;
 }
 
-.section2-cards{
+@media screen and (max-width:450px) {
+    .section3-title::before{
+        top: 110px;
+    }
+}
+
+.section3-cards{
     max-width: 1120px;
     width: 90%;
     margin: auto;
@@ -45,7 +53,7 @@
     }
 }
 
-.section2-card{
+.section3-card{
     width: 32%;   
     display: flex;
     flex-direction: column;
@@ -55,65 +63,67 @@
     }
 }
 
-.section2-cardImg{
+.section3-cardImg{
     
     height: 200px;
     width: 100%;
 }
 
-.section2-cardImg img{
+.section3-cardImg img{
     height: 200px;
     width: 100%;
     object-fit: cover;
 }
 
-.section2-cardDesc{
+.section3-cardDesc{
     width: 100%;
     margin: auto;
-    padding: 2rem 4rem;
-    background-color: var(--color-white);
+    padding: 2rem;
+    background-color: var(--color-primary);
     display: flex;
     flex-direction: column;align-items: center;
 }
 
-.section2-cardTitle{
+.section3-cardTitle{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.section2-cardTitle h3{
+.section3-cardTitle h3{
+    width: 100%;
     font-family: "Century Gothic";
     font-weight: "normal";
     font-size: 18px;
-    color: var(--color-primary);
+    color: var(--color-white);
 }
 
-.section2-cardTitle p{
+.section3-cardTitle p{
     font-family: "Poppins", Sans-serif;
     font-weight: 900;
     font-size: 18px;
-    color: var(--color-primary);
+    color: var(--color-white);
     margin: 1rem;
 }
 
 
-.section2-btn{
+.section3-btn{
     max-width: 200px;
     width: 100%;
-    background-color: var(--color-primary);
+    background-color: var(--color-white);
     height: 50px;
     transition: all ease-in-out .5s;
 }
 
-.section2-btn:hover{
+.section3-btn:hover{
     cursor: pointer;
     transform: scale(1.1);
 }
 
-.section2-BtnText{
+.section3-BtnText{
     transition: all ease-in-out .5s;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 200;
+    color: var(--color-primary);
 }
