@@ -1,10 +1,10 @@
 import React from "react";
 
 import Banner from "../../components/banner/Banner";
+import Section from "../../components/section/Section";
+import Section2 from "../../components/section2/Section2";
 
 import "./index.css";
-import Section from "../../components/section/Section";
-
 const Home = () => {
 
     const sectionList = [
@@ -24,6 +24,41 @@ const Home = () => {
 
     ]
 
+    const businessList = [
+        {
+            img:"images/2024-01-0H7A3960-300x200.webp",
+            btnText:["Coiffure & Make up"],
+            title:"Titre business 1",
+            price: "100"
+        },{
+            img:"images/2024-01-0H7A3960-300x200.webp",
+            btnText:["Onglerie"],
+            title:"Titre business 2",
+            price: "100"
+        },{
+            img:"images/2024-01-0H7A5060-768x512.webp",
+            btnText:["Cabines"],
+            title:"Titre business 3",
+            price: "100"
+        },
+        {
+            img:"images/2024-01-0H7A3960-300x200.webp",
+            btnText:["Coiffure & Make up"],
+            title:"Titre business 4",
+            price: "100"
+        },{
+            img:"images/2024-01-0H7A3960-300x200.webp",
+            btnText:["Onglerie"],
+            title:"Titre business 5",
+            price: "100"
+        },{
+            img:"images/2024-01-0H7A5060-768x512.webp",
+            btnText:["Cabines"],
+            title:"Titre business 6",
+            price: "100"
+        }
+    ]
+
     return (
         <>
             <main id="home" className="home">
@@ -34,7 +69,11 @@ const Home = () => {
                         title="Nos postes à louer"
                         sectionList={sectionList}
                     />
-                   
+                    <Section2 
+                        id="business"
+                        title="Nos Business Booster"
+                        section2List={businessList}
+                    />
                 </div>
             </main>
             {/* #content  */}

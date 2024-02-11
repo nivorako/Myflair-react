@@ -1,0 +1,117 @@
+.section2{
+    width: 100%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    align-items: center;
+}
+
+.section2-title{
+    position: relative;
+    font-size: 3rem;
+    margin-bottom: 5rem;
+    color: var(--color-white);
+    @media screen and (max-width:764px) {
+        font-size: 37px;
+    }
+}
+
+.section2-title::before{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80px;
+    content: "";
+    background-color: var(--color-white);
+    width: 50%;
+    margin: auto;
+    height: .7px;
+}
+
+.section2-cards{
+    max-width: 1120px;
+    width: 90%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    @media screen and (max-width:1024px) {
+        flex-direction: column;
+    }
+}
+
+.section2-card{
+    width: 32%;   
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    @media screen and (max-width:1024px) {
+        width: 100%;
+    }
+}
+
+.section2-cardImg{
+    
+    height: 200px;
+    width: 100%;
+}
+
+.section2-cardImg img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.section2-cardDesc{
+    width: 100%;
+    margin: auto;
+    padding: 2rem 4rem;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;align-items: center;
+}
+
+.section2-cardTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section2-cardTitle h3{
+    font-family: "Century Gothic";
+    font-weight: "normal";
+    font-size: 18px;
+    color: var(--color-primary);
+}
+
+.section2-cardTitle p{
+    font-family: "Poppins", Sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    color: var(--color-primary);
+    margin: 1rem;
+}
+
+
+.section2-btn{
+    width: 100%;
+    background-color: var(--color-primary);
+    height: 50px;
+    transition: all ease-in-out .5s;
+}
+
+.section2-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.section2-BtnText{
+    transition: all ease-in-out .5s;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 200;
+}
