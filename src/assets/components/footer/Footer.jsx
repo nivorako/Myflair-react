@@ -90,14 +90,18 @@ const Footer = () => {
                     <p>Contact</p>
                     <p>Blog</p>
                 </div>
-                <div className='footer-section'>
+                <div className='footer-section mt'>
                     <h3 className='footer-sectionTitle'>LOUER UN POSTE</h3>
                 </div>
-                <div className='footer-section'>
+                <div className='footer-section mt'>
                     <h3 className='footer-sectionTitle'>BUSINESS BOOSTER</h3>
                 </div>
-                <div className='footer-section'>
+                <div className='footer-section mt'>
                     <h3 className='footer-sectionTitle'>INFOS</h3>
+                    <p>Mentions légales</p>
+                    <p>Conditions générales de vente</p>
+                    <p>Conditions générales d'utilisation</p>
+                    <p>Politique de confidentialité</p>
                 </div>
             </div>
             <div className='footer-footer'>
