@@ -1,5 +1,4 @@
 import React from 'react';
-import Fb from "../../images/fb.svg";
 
 import "./index.css";
 
@@ -9,7 +8,7 @@ const Footer = () => {
             <div className='footer-title'>
                 <h3>suivez-nous sur les réseaux</h3>
                 <div className='footer-socialNW'>
-                    {/* <img src="images/fb.svg" alt='faceBook' className='fb'/> */}
+                    
                     <div className="footer-icon">
                         <a
                             className="elementor-icon"
@@ -92,9 +91,18 @@ const Footer = () => {
                 </div>
                 <div className='footer-section mt'>
                     <h3 className='footer-sectionTitle'>LOUER UN POSTE</h3>
+                    <p>Coiffure && make up</p>
+                    <p>Cabine</p>
+                    <p>Onglerie</p>
+                    <p>Salle de formation</p>
                 </div>
                 <div className='footer-section mt'>
                     <h3 className='footer-sectionTitle'>BUSINESS BOOSTER</h3>
+                    <p>Coaching Business</p>
+                    <p>Coaching Canva</p>
+                    <p>Creation flyer</p>
+                    <p>Création plaquette tarifaire</p>
+                    <p>Creation template </p>
                 </div>
                 <div className='footer-section mt'>
                     <h3 className='footer-sectionTitle'>INFOS</h3>
@@ -104,8 +112,9 @@ const Footer = () => {
                     <p>Politique de confidentialité</p>
                 </div>
             </div>
+            <div className='footer-line'></div>
             <div className='footer-footer'>
-
+                <p>© 2024 MyFlair.fr — Tous droits réservés — Propulsé par Webinflu</p>
             </div>
         </footer>
     )

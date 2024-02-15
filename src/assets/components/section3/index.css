@@ -12,7 +12,8 @@
     position: relative;
     font-size: 3rem;
     margin-bottom: 5rem;
-    font-weight: 200;
+    font-family: "Playfair Display", Sans-serif;
+    font-weight: 600;
     text-align: center;
     color: var(--color-primary);
     @media screen and (max-width:764px) {

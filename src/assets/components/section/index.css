@@ -12,6 +12,7 @@
 .section-title{
     position: relative;
     font-family: "Playfair Display", Sans-serif;
+    font-weight: 600;
     font-size: 3rem;
     margin-bottom: 5rem;
     color: var(--color-primary);
@@ -78,6 +79,7 @@
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 600;
+    color: white;
 }
 
 .section-BtnText:hover{
