@@ -69,23 +69,24 @@
       flex-direction: column;
       align-items: center;
    }
- } 
+   
+ }
 
-.footer-logo{
-    position: relative;
-    width: 200px;
-    margin-top: 3rem;
-    margin-bottom: 50px;
+ .footer-logo{
+   position: relative;
+   width: 200px;
+   margin-top: 3rem;
+   margin-bottom: 50px;
  }
 
  .footer-logo:after{
-    position: absolute;
-    content: "";
-    top: 100px;
-    left: 0;
-    background-color: white;
-    width: 4vw;
-    height: 1px;
+   position: absolute;
+   content: "";
+   top: 100px;
+   left: 0;
+   background-color: white;
+   width: 4vw;
+   height: 1px;
  }
 
  .footer-logoImg{
