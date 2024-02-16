@@ -6,6 +6,7 @@ import Section2 from "../../components/section2/Section2";
 import Section3 from "../../components/section3/Section3";
 
 import "./index.css";
+import BusinessSection from "../../components/businessSection/BusinessSection";
 const Home = () => {
 
     const sectionList = [
@@ -98,25 +99,29 @@ const Home = () => {
                         title="Nos postes à louer"
                         sectionList={sectionList}
                     />
-                    <Section2 
+                    {/* <BusinessSection
+                        id="businessSection"
+                        title="hello"
+                    /> */}
+                    {/* <Section2 
                         id="business"
                         title="Nos Business Booster"
                         section2List={businessList}
-                    />
+                    /> */}
                     <Section3 
                         id="services"
                         title="Nos Services Supplémentaires"
                         section3List={servicesList}
                     />
                 </div>
-                <div className="whatsapp">
+                {/* <div className="whatsapp">
                     <div className="whatsapp-msg">
-                        <p > Besoins d'aides ? <span>Discutez avec nous</span></p>
+                        <p > Besoins d'aides ? <span>Discutez avec noussss</span></p>
                     </div>
                     <div className="whatsapp-icon">
                         <img src="images/whatsapp.png" alt="logo whatsapp" />
                     </div>
-                </div>
+                </div> */}
             </main>
     );
 };

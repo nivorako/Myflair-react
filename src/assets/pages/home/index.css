@@ -1,6 +1,5 @@
 .home-content{
     width: 100%;
-    
 }
 .home-section{
     width: 100%;
@@ -8,10 +7,10 @@
 }
 
 .whatsapp{
-    position: fixed;
-    bottom: 2rem;
+    /* position: fixed; */
+    /* bottom: 2rem;
     right: 2rem;
-    display: flex;
+    display: flex; */
 }
 
 .whatsapp-msg{
