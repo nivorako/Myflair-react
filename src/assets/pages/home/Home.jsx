@@ -1,12 +1,12 @@
-import React from "react";
+import React,{useState} from "react";
 
 import Banner from "../../components/banner/Banner";
 import Section from "../../components/section/Section";
 import Section2 from "../../components/section2/Section2";
 import Section3 from "../../components/section3/Section3";
-
+import WhatsappIcon from "../../components/whatsappIcon/WhatsappIcon";
+import WhatsappClose from "../../components/whatsappClose/WhatsappClose";
 import "./index.css";
-import Whatsapp from "../../components/whatsapp/Whatsapp";
 
 const Home = () => {
 
@@ -91,6 +91,13 @@ const Home = () => {
         }
     ]
 
+    const [whatsappIsOpen, setWhatsappIsOpen] = useState(false);
+
+    const whatsappOnClick = () => {
+        setWhatsappIsOpen(!whatsappIsOpen); 
+         console.log("whatsappIsOpen :", whatsappIsOpen)     
+    }
+
     return (
             <main id="home" className="home">
                 <Banner />
@@ -111,9 +118,42 @@ const Home = () => {
                         section3List={servicesList}
                     />
                 </div>
-                <Whatsapp />
+                
+                {
+                    whatsappIsOpen
+                            ?
+                    (
+                        <div className="whatsapp" id="whatsapp" onClick={whatsappOnClick}>
+                            <div className="whatsapp-msg" id="whatsapp-msg">
+                                <p > Besoins d'aides ? <span>Discutez avec nous</span></p>
+                            </div>
+                            <WhatsappIcon />
+                        </div> 
+                    )
+                            :
+                    (
+                        <div className="whatsapp modal" id="whatsapp" onClick={whatsappOnClick}>
+                            <div className="whatsappModal">
+                                <div className="whatsappConv">
+                                    <div>
+                                        icon
+                                    </div>
+                                    <div>
+                                        commencer une conversation
+                                    </div>
+                                </div>
+                                <div className="whatsappClientServ">
+                                    whatsappClientServ
+                                </div>                                                
+                            </div>
+                            <WhatsappClose />
+                        </div>
+                    )
+                }
+                    
             </main>
     );
 };
 
 export default Home;
+ 

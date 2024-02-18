@@ -19,7 +19,8 @@ ul, li, a, span, p, h1, h2, h3, h4, h5, h5{
     padding: 0;
 }
 
-body{
+body, html{
+	width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
