@@ -1,0 +1,12 @@
+.whatsapp-icon{
+    margin-left: 2rem;
+    border-radius: 50%;
+}
+
+.whatsapp-icon:hover{
+    cursor: pointer;
+}
+ 
+.whatsapp-icon img{
+    border-radius: 50%;
+}
