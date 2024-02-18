@@ -7,14 +7,14 @@
     text-align: center;
 }
 
-.whatsapp{
-    /* position: fixed; */
-    /* bottom: 2rem;
+/* .whatsapp{
+    position: fixed;
+    bottom: 2rem;
     right: 2rem;
-    display: flex; */
-}
+    display: flex;
+} */
 
-.whatsapp-msg{
+/* .whatsapp-msg{
     width: 156px;
     height: auto;
     background-color: #f5f7f9;
@@ -22,8 +22,6 @@
     border-radius: 4px;
     color: #43474e;
     font-size: 12px;
-    /* letter-spacing: -.03em;
-    line-height: 1.5; */
     display: flex;
     align-items: center;
     }
@@ -39,4 +37,4 @@
  
 .whatsapp-icon img{
     border-radius: 50%;
-}
+} */

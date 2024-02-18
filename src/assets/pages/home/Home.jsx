@@ -99,15 +99,15 @@ const Home = () => {
                         title="Nos postes à louer"
                         sectionList={sectionList}
                     />
-                    {/* <BusinessSection
+                    <BusinessSection
                         id="businessSection"
                         title="hello"
-                    /> */}
-                    {/* <Section2 
+                    />
+                    <Section2 
                         id="business"
                         title="Nos Business Booster"
                         section2List={businessList}
-                    /> */}
+                    />
                     <Section3 
                         id="services"
                         title="Nos Services Supplémentaires"
