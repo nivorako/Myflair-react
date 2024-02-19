@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 
 import Banner from "../../components/banner/Banner";
 import Section from "../../components/section/Section";
@@ -7,6 +7,7 @@ import Section3 from "../../components/section3/Section3";
 import WhatsappIcon from "../../components/whatsappIcon/WhatsappIcon";
 import WhatsappClose from "../../components/whatsappClose/WhatsappClose";
 import "./index.css";
+import WhatsappSvg from "../../components/whatsappSvg/WhatsappSvg";
 
 const Home = () => {
 
@@ -93,10 +94,11 @@ const Home = () => {
 
     const [whatsappIsOpen, setWhatsappIsOpen] = useState(false);
 
+    console.log("isopen : ", whatsappIsOpen)
     const whatsappOnClick = () => {
         setWhatsappIsOpen(!whatsappIsOpen); 
          console.log("whatsappIsOpen :", whatsappIsOpen)     
-    }
+    };
 
     return (
             <main id="home" className="home">
@@ -120,10 +122,10 @@ const Home = () => {
                 </div>
                 
                 {
-                    whatsappIsOpen
+                    !whatsappIsOpen
                             ?
                     (
-                        <div className="whatsapp" id="whatsapp" onClick={whatsappOnClick}>
+                        <div className="whatsapp" id="whatsapp" onClick={() => whatsappOnClick()}>
                             <div className="whatsapp-msg" id="whatsapp-msg">
                                 <p > Besoins d'aides ? <span>Discutez avec nous</span></p>
                             </div>
@@ -132,14 +134,20 @@ const Home = () => {
                     )
                             :
                     (
-                        <div className="whatsapp modal" id="whatsapp" onClick={whatsappOnClick}>
+                        <div className="whatsapp modal" id="whatsapp" onClick={() => whatsappOnClick()}>
                             <div className="whatsappModal">
                                 <div className="whatsappConv">
-                                    <div>
-                                        icon
+                                    <div className="whatsappConv-icon">
+                                        
+                                        <WhatsappSvg />
                                     </div>
-                                    <div>
-                                        commencer une conversation
+                                    <div className="whatsappConv-text">
+                                        <p className="whatsappConv-text1">
+                                            Commencer une conversation
+                                        </p>
+                                        <p className="whatsappConv-text2">
+                                        Cliquez sur l'un des membres ci-dessous pour discuter sur <span>whatsapp</span>
+                                        </p>
                                     </div>
                                 </div>
                                 <div className="whatsappClientServ">
