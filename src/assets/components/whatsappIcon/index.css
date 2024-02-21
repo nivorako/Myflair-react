@@ -8,4 +8,5 @@
 .whatsapp-icon img{
     border-radius: 50%;
     width: 56px;
+    transition: .2s all ease-in-out;
 }

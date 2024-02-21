@@ -93,11 +93,13 @@ const Home = () => {
     ]
 
     const [whatsappIsOpen, setWhatsappIsOpen] = useState(false);
-
-    console.log("isopen : ", whatsappIsOpen)
+    console.log("whatsappIsOpen :", whatsappIsOpen)
+    const [iconClicked, setIconClicked] = useState(false);
     const whatsappOnClick = () => {
-        setWhatsappIsOpen(!whatsappIsOpen); 
-         console.log("whatsappIsOpen :", whatsappIsOpen)     
+        setIconClicked(true)      
+        setTimeout(() => {
+            setWhatsappIsOpen(!whatsappIsOpen); 
+        }, 200);
     };
 
     return (
@@ -119,7 +121,7 @@ const Home = () => {
                         title="Nos Services Supplémentaires"
                         section3List={servicesList}
                     />
-                </div>
+                </div> 
                 
                 {
                     !whatsappIsOpen
@@ -129,7 +131,9 @@ const Home = () => {
                             <div className="whatsapp-msg" id="whatsapp-msg">
                                 <p > Besoins d'aides ? <span>Discutez avec nous</span></p>
                             </div>
-                            <WhatsappIcon />
+                            <WhatsappIcon 
+                                rotate={iconClicked ? '360deg' : '0deg'}
+                            />
                         </div> 
                     )
                             :
