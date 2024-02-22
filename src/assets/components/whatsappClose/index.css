@@ -12,6 +12,12 @@
 .whatsappClose-svg{
     width: 26px;
     fill: white;
+    transform: rotate(0deg); /* Ajoutez ceci pour initialiser la rotation */
+    transition: transform 0.2s ease;
+}
+
+.rotate{
+    transform: rotate(360deg);
 }
 
 .whatsappClose:hover{

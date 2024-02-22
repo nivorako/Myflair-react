@@ -93,14 +93,23 @@ const Home = () => {
     ]
 
     const [whatsappIsOpen, setWhatsappIsOpen] = useState(false);
-    console.log("whatsappIsOpen :", whatsappIsOpen)
+    
     const [iconClicked, setIconClicked] = useState(false);
-    const whatsappOnClick = () => {
-        setIconClicked(true)      
+    
+    const whatsappIconOnClick = () => {   
+        setIconClicked(prevState => !prevState);
         setTimeout(() => {
-            setWhatsappIsOpen(!whatsappIsOpen); 
+            setWhatsappIsOpen(prevState => !prevState);       
         }, 200);
     };
+
+    const whatsappCloseOnClick = () => {       
+        setIconClicked(false);
+        setTimeout(() => {           
+            setWhatsappIsOpen(false);
+        }, 200)
+    }
+
 
     return (
             <main id="home" className="home">
@@ -127,7 +136,11 @@ const Home = () => {
                     !whatsappIsOpen
                             ?
                     (
-                        <div className="whatsapp" id="whatsapp" onClick={() => whatsappOnClick()}>
+                        <div 
+                            className={`whatsapp ${whatsappIsOpen ? 'animation-slide' : ''}`}  
+                            id="whatsapp" 
+                            onClick={() => whatsappIconOnClick()}
+                        >
                             <div className="whatsapp-msg" id="whatsapp-msg">
                                 <p > Besoins d'aides ? <span>Discutez avec nous</span></p>
                             </div>
@@ -138,7 +151,7 @@ const Home = () => {
                     )
                             :
                     (
-                        <div className="whatsapp modal" id="whatsapp" onClick={() => whatsappOnClick()}>
+                        <div className="whatsapp modal" id="whatsapp">
                             <div className="whatsappModal">
                                 <div className="whatsappConv">
                                     <div className="whatsappConv-icon">
@@ -158,7 +171,11 @@ const Home = () => {
                                     whatsappClientServ
                                 </div>                                                
                             </div>
-                            <WhatsappClose />
+                            <WhatsappClose 
+                                rotate={iconClicked ? true : false}
+
+                                onClick={whatsappCloseOnClick}
+                            />
                         </div>
                     )
                 }
