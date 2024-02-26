@@ -5,8 +5,8 @@ import Section from "../../components/section/Section";
 import Section2 from "../../components/section2/Section2";
 import Section3 from "../../components/section3/Section3";
 import "./index.css";
-import WhatsappAd from "../../components/whatsapp-ad/WhatsappAd";
-import WhatsappModal from "../../components/whatsapp-modal/whatsappModal";
+import WhatsappAd from "../../components/whatsappAd/WhatsappAd";
+import WhatsappModal from "../../components/whatsappModal/whatsappModal";
 const Home = () => {
 
     const sectionList = [
