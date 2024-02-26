@@ -1,22 +1,13 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import "./index.css";
 import WhatsappClose from '../whatsappClose/WhatsappClose';
 import WhatsappSvg from '../whatsappSvg/WhatsappSvg';
 import Fade from '../fade/Fade';
 
-useEffect(() => {
-    const service = document.getElementById("whatsapp-modalService");
-    if(service){
-        setTimeout(() => {
-            service.classList.add("fadeInService");
-        }, 1000)
-    }
-}, [])
-
-const WhatsappModal = ({iconClicked, isOpen}) => {
+const WhatsappModal = ({iconClicked}) => {
     return (
         <div className='whatsapp-modal'>
-            <Fade visible={isOpen}>
+            
                 <div className='whatsapp-modal-modal fadeInTxt'>
                     <div className='whatsapp-modalConv'>
                         <div className='whatsapp-modalConv-icon'>
@@ -52,7 +43,7 @@ const WhatsappModal = ({iconClicked, isOpen}) => {
                         </div>
                     </div>
                 </div>
-            </Fade>
+           
             <div className='whatsapp-modal-icon'>
                 <WhatsappClose
                     rotate={iconClicked ? true : false}  

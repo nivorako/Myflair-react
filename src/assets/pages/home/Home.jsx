@@ -105,14 +105,6 @@ const Home = () => {
             setWhatsappIsOpen(true);        
         }, 200);
     };
-    
-    // useEffect(() => {   
-    //     if (whatsappMsg) {
-    //         whatsappMsg.classList.remove("fadeInMsg");
-    //         whatsappMsg.classList.add("fadeOutMsg");
-    //         console.log("coucou")
-    //     }  
-    // }, [whatsappMsg]);
 
     const whatsappCloseOnClick = () => {       
         setIconClicked(false);
@@ -159,7 +151,6 @@ const Home = () => {
                             <div onClick={whatsappCloseOnClick}>
                                 <WhatsappModal 
                                     iconClicked={iconClicked}
-                                    isOpen={whatsappIsOpen}
                                 />
                             </div>
                         )
