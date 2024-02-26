@@ -2,7 +2,6 @@ import React from 'react';
 import "./index.css";
 import WhatsappClose from '../whatsappClose/WhatsappClose';
 import WhatsappSvg from '../whatsappSvg/WhatsappSvg';
-import Fade from '../fade/Fade';
 
 const WhatsappModal = ({iconClicked}) => {
     return (

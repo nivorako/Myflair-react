@@ -1,13 +1,10 @@
-import React,{useState, useEffect} from "react";
+import React,{useState} from "react";
 
 import Banner from "../../components/banner/Banner";
 import Section from "../../components/section/Section";
 import Section2 from "../../components/section2/Section2";
 import Section3 from "../../components/section3/Section3";
-import WhatsappIcon from "../../components/whatsappIcon/WhatsappIcon";
-import WhatsappClose from "../../components/whatsappClose/WhatsappClose";
 import "./index.css";
-import WhatsappSvg from "../../components/whatsappSvg/WhatsappSvg";
 import WhatsappAd from "../../components/whatsapp-ad/WhatsappAd";
 import WhatsappModal from "../../components/whatsapp-modal/whatsappModal";
 const Home = () => {
