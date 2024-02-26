@@ -8,7 +8,8 @@ import WhatsappIcon from "../../components/whatsappIcon/WhatsappIcon";
 import WhatsappClose from "../../components/whatsappClose/WhatsappClose";
 import "./index.css";
 import WhatsappSvg from "../../components/whatsappSvg/WhatsappSvg";
-
+import WhatsappAd from "../../components/whatsapp-ad/WhatsappAd";
+import WhatsappModal from "../../components/whatsapp-modal/whatsappModal";
 const Home = () => {
 
     const sectionList = [
@@ -96,12 +97,22 @@ const Home = () => {
     
     const [iconClicked, setIconClicked] = useState(false);
     
-    const whatsappIconOnClick = () => {   
-        setIconClicked(prevState => !prevState);
+    // const whatsappMsg = document.getElementById("whatsappMsg");
+
+    const whatsappIconOnClick = () => {       
+        setIconClicked(true);
         setTimeout(() => {
-            setWhatsappIsOpen(prevState => !prevState);       
+            setWhatsappIsOpen(true);        
         }, 200);
     };
+    
+    // useEffect(() => {   
+    //     if (whatsappMsg) {
+    //         whatsappMsg.classList.remove("fadeInMsg");
+    //         whatsappMsg.classList.add("fadeOutMsg");
+    //         console.log("coucou")
+    //     }  
+    // }, [whatsappMsg]);
 
     const whatsappCloseOnClick = () => {       
         setIconClicked(false);
@@ -131,54 +142,29 @@ const Home = () => {
                         section3List={servicesList}
                     />
                 </div> 
-                
-                {
-                    !whatsappIsOpen
-                            ?
-                    (
-                        <div 
-                            className={`whatsapp ${whatsappIsOpen ? 'animation-slide' : ''}`}  
-                            id="whatsapp" 
-                            onClick={() => whatsappIconOnClick()}
-                        >
-                            <div className="whatsapp-msg" id="whatsapp-msg">
-                                <p > Besoins d'aides ? <span>Discutez avec nous</span></p>
-                            </div>
-                            <WhatsappIcon 
-                                rotate={iconClicked ? '360deg' : '0deg'}
-                            />
-                        </div> 
-                    )
-                            :
-                    (
-                        <div className="whatsapp modal" id="whatsapp">
-                            <div className="whatsappModal">
-                                <div className="whatsappConv">
-                                    <div className="whatsappConv-icon">
-                                        
-                                        <WhatsappSvg />
-                                    </div>
-                                    <div className="whatsappConv-text">
-                                        <p className="whatsappConv-text1">
-                                            Commencer une conversation
-                                        </p>
-                                        <p className="whatsappConv-text2">
-                                        Cliquez sur l'un des membres ci-dessous pour discuter sur <span>whatsapp</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="whatsappClientServ">
-                                    whatsappClientServ
-                                </div>                                                
-                            </div>
-                            <WhatsappClose 
-                                rotate={iconClicked ? true : false}
 
-                                onClick={whatsappCloseOnClick}
-                            />
-                        </div>
-                    )
-                }
+                <div className="wa" >
+                    {
+                        !whatsappIsOpen
+                                ?
+                        (
+                            <div onClick={ whatsappIconOnClick}>
+                                <WhatsappAd 
+                                    iconClicked={iconClicked}
+                                />
+                            </div>
+                        )
+                                :
+                        (
+                            <div onClick={whatsappCloseOnClick}>
+                                <WhatsappModal 
+                                    iconClicked={iconClicked}
+                                    isOpen={whatsappIsOpen}
+                                />
+                            </div>
+                        )
+                    }                   
+                </div>
                     
             </main>
     );

@@ -6,6 +6,7 @@ import "./App.css";
 
 
 function App() {
+	console.log('app')
     return (
 		<div className="app">
 			<Header />

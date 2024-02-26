@@ -9,6 +9,10 @@
     align-items: center;
 }
 
+.whatsappClose:hover{
+    cursor: pointer;
+}
+
 .whatsappClose-svg{
     width: 26px;
     fill: white;
