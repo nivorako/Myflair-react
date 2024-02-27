@@ -96,20 +96,24 @@ const Home = () => {
 
     const [iconClicked, setIconClicked] = useState(false);
 
+    const [showService, setShowService] = useState(false);
+
     const whatsappIconOnClick = () => {       
         setIconClicked(true);
         setWhatsappAdVisible(false)
+        setShowService(true)
         setTimeout(() => {
             setwhatsappModalIsOpen(true);        
-        }, 300);
+        }, 200);
     };
 
     const whatsappCloseOnClick = () => {       
         setIconClicked(false);
         setWhatsappAdVisible(true)
+        setShowService(false)
         setTimeout(() => {           
             setwhatsappModalIsOpen(false);
-        }, 300)
+        }, 200)
     }
 
 
@@ -142,7 +146,7 @@ const Home = () => {
                             <div onClick={ whatsappIconOnClick}>
                                 <WhatsappAd 
                                     iconClicked={iconClicked}
-                                    isOpen={whatsappModalIsOpen}
+                                   
                                     visible={whatsappAdVisible}
                                 />
                             </div>
@@ -152,6 +156,8 @@ const Home = () => {
                             <div onClick={whatsappCloseOnClick}>
                                 <WhatsappModal 
                                     iconClicked={iconClicked}
+                                    visible={whatsappAdVisible}
+                                    showService={showService}
                                 />
                             </div>
                         )

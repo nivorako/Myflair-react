@@ -1,10 +1,9 @@
 import React, {useEffect} from 'react';
 import "./index.css";
 import WhatsappIcon from '../whatsappIcon/WhatsappIcon';
-import Fade from '../fade/Fade';
 
-const WhatsappAd = ({iconClicked, visible, isOpen}) => {
-	console.log("visible :", visible)
+const WhatsappAd = ({iconClicked, visible}) => {
+	
 	return (
 		<div className="whatsappAd">
 			

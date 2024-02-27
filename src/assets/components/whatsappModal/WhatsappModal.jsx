@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import "./index.css";
 import WhatsappClose from '../whatsappClose/WhatsappClose';
 import WhatsappSvg from '../whatsappSvg/WhatsappSvg';
 
-const WhatsappModal = ({iconClicked}) => {
+const WhatsappModal = ({iconClicked, visible, showService}) => {
+    
     return (
         <div className='whatsapp-modal'>
             
-                <div className='whatsapp-modal-modal fadeInTxt'>
+                <div className={`whatsapp-modal-modal ${visible ? "fadeOutService" : "fadeInService"}`}>
                     <div className='whatsapp-modalConv'>
                         <div className='whatsapp-modalConv-icon'>
                             <WhatsappSvg />
@@ -23,7 +24,10 @@ const WhatsappModal = ({iconClicked}) => {
                                 L'équipe répond généralement en quelques minutes.
                             </p>
                         </div>
-                        <div className='whatsapp-modalService-service' id="whatsapp-modalService">
+                        <div 
+                            className='whatsapp-modalService-service fadeInModalService' 
+                            id="whatsapp-modalService"
+                        >
                             <div className='whatsapp-modalService-bigIcon'>
                                 <img src="images/wa.svg" alt="" className='wa-img' />
                                 

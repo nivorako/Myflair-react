@@ -17,7 +17,7 @@
     z-index: 20;
 }
 
-.fadeInMsg {
+/* .fadeInMsg {
     animation-name: fadeInMsg;
 }
 
@@ -75,4 +75,4 @@
         opacity: 1;
         transform: translateY(25%);
     }
-}
+} */
