@@ -90,24 +90,26 @@ const Home = () => {
         }
     ]
 
-    const [whatsappIsOpen, setWhatsappIsOpen] = useState(false);
+    const [whatsappModalIsOpen, setwhatsappModalIsOpen] = useState(false);
     
+    const [whatsappAdVisible, setWhatsappAdVisible] = useState(true)
+
     const [iconClicked, setIconClicked] = useState(false);
-    
-    // const whatsappMsg = document.getElementById("whatsappMsg");
 
     const whatsappIconOnClick = () => {       
         setIconClicked(true);
+        setWhatsappAdVisible(false)
         setTimeout(() => {
-            setWhatsappIsOpen(true);        
-        }, 200);
+            setwhatsappModalIsOpen(true);        
+        }, 300);
     };
 
     const whatsappCloseOnClick = () => {       
         setIconClicked(false);
+        setWhatsappAdVisible(true)
         setTimeout(() => {           
-            setWhatsappIsOpen(false);
-        }, 200)
+            setwhatsappModalIsOpen(false);
+        }, 300)
     }
 
 
@@ -134,12 +136,14 @@ const Home = () => {
 
                 <div className="wa" >
                     {
-                        !whatsappIsOpen
+                        !whatsappModalIsOpen
                                 ?
                         (
                             <div onClick={ whatsappIconOnClick}>
                                 <WhatsappAd 
                                     iconClicked={iconClicked}
+                                    isOpen={whatsappModalIsOpen}
+                                    visible={whatsappAdVisible}
                                 />
                             </div>
                         )

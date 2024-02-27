@@ -5,10 +5,12 @@ const Fade = ({visible, children}) => {
     let className = "fade";
     if(!visible){
         className += " out";
+    }else{
+        className += " in";
     }
     console.log("isopen in fade:", visible)
     return (
-        <div className={className}>
+        <div className= "fade in">
             {children}
         </div>
     )
