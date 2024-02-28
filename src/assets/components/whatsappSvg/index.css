@@ -2,7 +2,14 @@
     
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: rgb(45, 183, 66);
+    align-items: center;  
     border-radius: 50px;
+}
+
+.green{
+    background-color: rgb(45, 183, 66);
+}
+
+.grey{
+    background-color: #ececec;
 }

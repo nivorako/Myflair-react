@@ -39,7 +39,7 @@
 }
 
 .whatsapp-modalService-bigIcon{
-    width: 50px;
+    width: 40px;
     background-color: #ececec;
     border-radius: 20px;
 }
@@ -47,7 +47,7 @@
 .whatsapp-modalService-littleIcon{
     width: 20px;
     background-color: #ececec;
-    border-radius: 20px;
+   
 }
 
 .whatsapp-modalConv-text{
@@ -98,6 +98,11 @@
     animation-fill-mode: both;
 }
 
+.whatsapp-modalService-text{
+    width: 70%;
+}
+
+
 .whatsapp-modal-icon{
     width: 90%;
     margin: auto;
@@ -112,6 +117,8 @@
 .fadeModalService{
     opacity: 0;
 }
+
+
 
 .fadeInModalService{
     animation-name: fadeInModalService;

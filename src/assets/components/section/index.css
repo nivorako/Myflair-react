@@ -13,7 +13,7 @@
     position: relative;
     font-family: "Playfair Display", Sans-serif;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 2.65rem;
     margin-bottom: 5rem;
     color: var(--color-primary);
     @media screen and (max-width:764px) {
